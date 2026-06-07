@@ -11,7 +11,7 @@ function App() {
   const [categoriaFiltro, setCategoriaFiltro] = useState(null);
 
   const fetchReporte = useCallback(() => {
-    fetch("http://localhost:3000/reporte/1?inicio=2026-06-01&fin=2026-06-30")
+    fetch("https://budgetlog-production.up.railway.app/reporte/1?inicio=2026-06-01&fin=2026-06-30")
       .then((res) => res.json())
       .then((data) => setReporte(data))
       .catch(() => setError("No se pudo conectar con el servidor."));

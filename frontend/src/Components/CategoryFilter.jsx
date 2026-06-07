@@ -5,7 +5,7 @@ function CategoryFilter({ onFiltrar }) {
   const [seleccionada, setSeleccionada] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/categorias/1")
+    fetch("https://budgetlog-production.up.railway.app/categorias/1")
       .then((res) => res.json())
       .then((data) => setCategorias(data))
       .catch(() => console.error("No se pudieron cargar las categorías."));
