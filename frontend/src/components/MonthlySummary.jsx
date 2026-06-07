@@ -5,7 +5,7 @@ function MonthlySummary({ refresh, categoriaFiltro }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/gastos/1?inicio=2026-06-01&fin=2026-06-30")
+    fetch("https://budgetlog-production.up.railway.app/gastos/1?inicio=2026-06-01&fin=2026-06-30")
       .then((res) => res.json())
       .then((data) => setGastos(data))
       .catch(() => setError("No se pudieron cargar los gastos."));
